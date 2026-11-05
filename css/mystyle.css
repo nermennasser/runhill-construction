@@ -1,0 +1,379 @@
+/* Base Styling */
+body {
+  font-family: "Cairo", "Montserrat", sans-serif;
+  overflow-x: hidden;
+  background-color: #f8f9fa;
+}
+.gray-bg {
+  background: #eeeeee;
+}
+/* إنشاء حركة الصعود والتلاشي يدوياً */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* الكلاس الذي سنستخدمه للعنصر المتحرك */
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-in-out forwards;
+}
+
+/* Navbar Styling */
+
+.navbar {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  padding: 12px 0;
+}
+
+.navbar-brand img {
+  height: 42px;
+  width: auto;
+}
+
+.navbar-nav .nav-link {
+  position: relative;
+  color: #6c757d; /* لون افتراضي غير نشط */
+  transition: color 0.3s ease;
+}
+.nav-link:hover,
+.nav-item .nav-link.active {
+  color: #ffb400 !important;
+}
+
+.navbar-nav .nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #ffc200;
+}
+
+/*  */
+/* ضبط المسافة بين اللوجو والقائمة في اللغة العربية (RTL) */
+[dir="rtl"] .navbar-nav.ml-auto {
+  margin-left: unset !important;
+  margin-right: auto !important;
+}
+
+/* ضبط المسافة بين اللوجو والقائمة في اللغة الإنجليزية (LTR) */
+[dir="ltr"] .navbar-nav.ml-auto {
+  margin-right: unset !important;
+  margin-left: auto !important;
+}
+
+/* Carousel Section Styling */
+#mainCarousel .carousel-item {
+  height: 88vh;
+  min-height: 500px;
+  background-color: #000;
+}
+
+#mainCarousel .carousel-item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  opacity: 0.65; /* Dark overlay effect for clarity */
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: auto !important;
+  max-width: 650px;
+  padding: 20px;
+  z-index: 10;
+}
+
+/* Dynamic Text Alignment for Caption based on direction */
+[dir="rtl"] .carousel-caption {
+  right: 8%;
+  left: auto;
+  text-align: right !important;
+}
+
+[dir="ltr"] .carousel-caption {
+  left: 8%;
+  right: auto;
+  text-align: left !important;
+}
+
+/* .... */
+.carousel-caption h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #ffffff;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.6);
+  margin-bottom: 20px;
+}
+
+.carousel-caption p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #f1f1f1;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  margin-bottom: 25px;
+}
+
+/* Custom CTA Button */
+.btn-quote {
+  background-color: #ffc107;
+  color: #000;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 12px 30px;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0 4px 15px rgba(255, 193, 7, 0.4);
+  transition: all 0.3s ease;
+}
+
+.btn-quote:hover {
+  background-color: #e0a800;
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 193, 7, 0.6);
+}
+
+/* Carousel Controls */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+  opacity: 0.8;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 45px;
+  height: 45px;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-size: 50%;
+  border-radius: 50%;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 768px) {
+  .carousel-caption h1 {
+    font-size: 1.8rem;
+  }
+  .carousel-caption p {
+    font-size: 1rem;
+  }
+  .carousel-caption {
+    left: 5% !important;
+    right: 5% !important;
+    max-width: 90%;
+  }
+}
+
+/* home section */
+
+.home .row .line {
+  height: 3px;
+  width: 100px;
+  background-color: #ffb400;
+  margin: 0;
+  margin-bottom: 20px;
+}
+.home .row p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.carousel-arrow span {
+  border-radius: 0;
+}
+.carousel-arrow span:hover {
+  background-color: #ffb400 !important;
+}
+[dir="rtl"] .home {
+  text-align: right !important;
+}
+
+[dir="ltr"] .carousel-caption {
+  text-align: left !important;
+}
+/* services */
+/*  */
+/* تنسيق بطاقات الخدمات */
+.card {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* تنسيق زر view all project */
+.btn-quote {
+  background-color: #ffc200;
+  color: #000;
+  font-weight: bold;
+  padding: 12px 24px;
+  border-radius: 4px;
+  text-transform: lowercase;
+  transition: all 0.3s ease;
+}
+
+.btn-quote:hover {
+  background-color: #e6b000;
+  color: #000;
+  text-decoration: none;
+}
+.news .line {
+  height: 3px;
+  width: 50px;
+  background-color: #ffb400;
+  margin: 0;
+  margin-bottom: 20px;
+}
+/* ضبط المسافات للأخبار في حالة RTL */
+[dir="rtl"] .media img {
+  margin-right: 0 !important;
+  margin-left: 1rem !important;
+}
+[dir="rtl"] .card {
+  text-align: right !important;
+}
+[dir="rtl"] .news {
+  text-align: right !important;
+}
+
+/* تنسيق خط عنوان قسم لماذا تختارنا */
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: #ffc200;
+}
+
+/* تنسيق الأيقونات الدائرية السفليّة */
+.icon-circle {
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  background-color: #ffc200 !important;
+}
+
+/* ضبط محاذاة النصوص والأيقونات في وضع اللغة الإنجليزية (LTR) */
+[dir="ltr"] .why-choose-us .text-lg-right {
+  text-align: left !important;
+}
+
+[dir="ltr"] .why-choose-us .text-sm-right {
+  text-align: left !important;
+}
+
+/* ضبط مسافات الهوامش للأيقونات حسب اتجاه اللغة */
+[dir="ltr"] .icon-circle {
+  margin-right: 10px;
+}
+/*  */
+/* خلفية قسم النشرة البريدية البرتقالية مع صورة المهندس */
+
+.newsletter-section {
+  background:
+    linear-gradient(to bottom, rgba(255, 194, 0, 0.8), rgba(16, 28, 36, 0.88)),
+    url("https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1200")
+      no-repeat center center/cover;
+}
+
+/* التنسيق الخاص باللغة الإنجليزية في التقييمات والنشرة البريدية */
+[dir="ltr"] .testimonial-item {
+  text-align: left !important;
+}
+
+[dir="ltr"] .newsletter-section .text-lg-right {
+  text-align: left !important;
+}
+
+[dir="rtl"] .testimonial-item img {
+  margin-left: 1rem !important;
+  margin-right: 0 !important;
+}
+
+[dir="ltr"] .testimonial-item img {
+  margin-right: 1rem !important;
+  margin-left: 0 !important;
+}
+
+/* تأثير البطاقات عند التحويم */
+.testimonial-item {
+  transition: transform 0.3s ease;
+  border: 1px solid #eee;
+}
+
+.testimonial-item:hover {
+  transform: translateY(-5px);
+}
+/*  */
+.cta-divider {
+  margin-bottom: 0 !important;
+  background: linear-gradient(135deg, #101c24 65%, #ffc200 100%) !important;
+  /* border-top: 2px dashed #ffc200; */
+  color: #ffffff;
+  background: linear-gradient(
+    367deg,
+    hwb(204 6% 86%) 55%,
+    #ffc200 107%
+  ) !important;
+}
+
+[dir="ltr"] .cta-divider .text-md-right {
+  text-align: left !important;
+}
+
+[dir="ltr"] .cta-divider .text-md-left {
+  text-align: right !important;
+}
+/* footer */
+/* تنسيق الـ Footer */
+.footer-section {
+  background-color: #0b132b !important;
+  font-size: 14px;
+}
+
+.footer-section a:hover {
+  color: #ffc200 !important;
+  text-decoration: none;
+}
+
+.footer-links li a {
+  transition: color 0.3s ease;
+}
+
+/* ضبط الاتجاهات في الـ Footer للغة الإنجليزية */
+[dir="ltr"] .footer-section .text-lg-right {
+  text-align: left !important;
+}
+
+[dir="ltr"] .footer-section .text-md-right {
+  text-align: left !important;
+}
+
+[dir="ltr"] .footer-section .text-md-left {
+  text-align: right !important;
+}
+.footer-section {
+  box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.3); /* ظل سفلي يعطي عمقاً وفصلاً بين القسمين */
+  position: relative;
+  z-index: 2;
+  padding-top: 80px !important; /* مساحة أكبر من الأعلى */
+  /* border-top: 1px solid #ffc200; خط أصفر فاصل وبارز */
+}

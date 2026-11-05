@@ -1,0 +1,25 @@
+/* تنسيقات صفحة اتصل بنا */
+.contact-section .form-control {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  padding: 12px 15px;
+  font-size: 14px;
+}
+
+.contact-section .form-control:focus {
+  border-color: #ffc200;
+  box-shadow: none;
+}
+
+.contact-info-box h6 {
+  color: #101c24;
+}
+
+/* ضبط محاذاة اللغتين في صفحة اتصل بنا */
+[dir="ltr"] .contact-section .text-lg-right {
+  text-align: left !important;
+}
+
+[dir="rtl"] .contact-section input {
+  text-align: right !important;
+}

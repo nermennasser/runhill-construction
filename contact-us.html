@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" id="html-tag">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RUNHILL - شركة البناء والمقاولات</title>
+
+    <!-- Bootstrap 4.6.2 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        id="bootstrap-css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Montserrat:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/mystyle.css">
+    <link rel="stylesheet" href="css/contact.css">
+
+</head>
+
+<body>
+    <!-- Header Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top ">
+        <div class="container">
+
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <span style="font-size: 1.8rem; font-weight: 800; color: #ffb400; letter-spacing: 1px;">
+                    <i class="fas fa-city mr-1"></i> RUNHILL
+                </span>
+            </a>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="index.html" data-ar="الصفحة الرئيسية" data-en="Home">الصفحة
+                            الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html" data-ar="معلومات عنا" data-en="About Us">معلومات عنا</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button"
+                            data-toggle="dropdown" aria-expanded="false" data-ar="صفحات" data-en="Pages">
+                            <i class="fa-solid fa-arrow-down-long"></i> صفحات
+                        </a>
+                        <div class="dropdown-menu fade-in-up" aria-labelledby="pagesDropdown">
+                            <a class="dropdown-item" href="#" data-ar="مقالة فردية" data-en="Single Article">مقالة
+                                فردية</a>
+                            <a class="dropdown-item" href="#" data-ar="خدمة فردية" data-en="Single Service">خدمة
+                                فردية</a>
+                            <a class="dropdown-item" href="#" data-ar="مشروع فردي" data-en="Single Project">مشروع
+                                فردي</a>
+
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-ar="خدمات" data-en="Services">خدمات</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html" data-ar="مشاريع" data-en="Projects">مشاريع</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html" data-ar="صالة عرض" data-en="Gallery">صالة عرض</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-ar="مدونة" data-en="Blog">مدونة</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact-us.html" data-ar="اتصل بنا" data-en="Contact Us">اتصل
+                            بنا</a>
+                    </li>
+
+                    <!-- Language Switcher Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle font-weight-bold " href="#" id="languageDropdown"
+                            role="button" data-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-globe mr-1"></i> <span data-ar="اللغة" data-en="Language">اللغة</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right fade-in-up" aria-labelledby="languageDropdown">
+                            <a class="dropdown-item" href="javascript:void(0)" onclick="changeLanguage('ar')">
+                                <i class="flag-icon flag-icon-sa mr-2"></i> عربي
+                            </a>
+                            <a class="dropdown-item" href="javascript:void(0)" onclick="changeLanguage('en')">
+                                <i class="flag-icon flag-icon-us mr-2"></i> English
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Header Navigation -->
+    <!--  -->
+    <!-- 1. شريط العنوان والمسار (Breadcrumb Banner) -->
+    <section class="page-banner bg-light py-4 mb-5 border-bottom fade-in-up">
+        <div class="container d-flex justify-content-between align-items-center">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb bg-transparent p-0 m-0 small">
+                    <li class="breadcrumb-item"><a href="index.html" class="text-warning font-weight-bold"
+                            data-ar="الرئيسية" data-en="HOME">HOME</a></li>
+                    <li class="breadcrumb-item active text-muted" aria-current="page" data-ar="اتصل بنا"
+                        data-en="CONTACT">CONTACT</li>
+                </ol>
+            </nav>
+            <h2 class="h4 font-weight-bold m-0" data-ar="اتصل بنا" data-en="Contact">Contact</h2>
+        </div>
+    </section>
+
+    <!-- 2. قسم نموذج التواصل والمعلومات -->
+    <section class="contact-section my-5">
+        <div class="container">
+            <div class="row fade-in-up">
+
+                <!-- نموذج إرسال الرسائل -->
+                <div class="col-lg-8 mb-4 mb-lg-0">
+                    <div class="card border-0 shadow-sm p-4 bg-light">
+                        <h5 class="font-weight-bold mb-4 text-lg-right text-center"
+                            data-ar="املأ النموذج أدناه وسنتواصل معك:"
+                            data-en="Fill in the form below and we'll get back in touch:">
+                            Fill in the form below and we'll get back in touch:
+                        </h5>
+
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <input type="text" class="form-control rounded-0" placeholder="الاسم" required
+                                        data-ar-placeholder="الاسم" data-en-placeholder="Name">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input type="email" class="form-control rounded-0" placeholder="البريد الإلكتروني"
+                                        required data-ar-placeholder="البريد الإلكتروني" data-en-placeholder="Email">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <input type="tel" class="form-control rounded-0" placeholder="الهاتف"
+                                        data-ar-placeholder="الهاتف" data-en-placeholder="Phone">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input type="text" class="form-control rounded-0" placeholder="الشركة"
+                                        data-ar-placeholder="الشركة" data-en-placeholder="Company">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <textarea class="form-control rounded-0" rows="5" placeholder="الرسالة" required
+                                    data-ar-placeholder="الرسالة" data-en-placeholder="Message"></textarea>
+                            </div>
+
+                            <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center mt-4">
+                                <small class="text-muted mb-3 mb-sm-0"
+                                    data-ar="أو اتصل بنا مباشرة على الرقم: Tel: +123-5443-415"
+                                    data-en="Or telephone us with part number on : Tel: +123-5443-415">
+                                    أو اتصل بنا مباشرة على الرقم: Tel: +123-5443-415
+                                </small>
+                                <button type="submit"
+                                    class="btn btn-warning rounded-0 px-5 font-weight-bold text-uppercase"
+                                    data-ar="إرسال" data-en="SEND">
+                                    إرسال
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- معلومات الاتصال الجانبية -->
+                <div class="col-lg-4 text-center text-lg-right">
+                    <div class="contact-info-box p-3">
+                        <!-- العنوان -->
+                        <div class="mb-4">
+                            <h6 class="font-weight-bold mb-1" data-ar="عنواننا" data-en="Our Address">Our Address</h6>
+                            <p class="small text-muted mb-0">Construction Limited</p>
+                            <p class="small text-muted mb-0">Quadra Street Victoria 210-2750</p>
+                            <p class="small text-muted mb-0">Canada</p>
+                        </div>
+
+                        <!-- الهاتف -->
+                        <div class="mb-4">
+                            <h6 class="font-weight-bold mb-1" data-ar="اتصل بنا" data-en="Call Us">Call Us</h6>
+                            <p class="small text-muted mb-0">Phone: +123-5443-415</p>
+                            <p class="small text-muted mb-0">Fax: +123-5442-415</p>
+                        </div>
+
+                        <!-- البريد الإلكتروني -->
+                        <div>
+                            <h6 class="font-weight-bold mb-1" data-ar="البريد الإلكتروني" data-en="Email">Email</h6>
+                            <p class="small text-muted mb-0">support@construction.com</p>
+                            <p class="small text-muted mb-0">info@construction.com</p>
+                            <p class="small text-muted mb-0">admin@construction.com</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. قسم خريطة قوقل (Google Map) -->
+    <section class="map-section mt-5">
+        <div class="container-fluid p-0">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d84690.66258079017!2d-123.39860368260173!3d48.43294334360341!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548f738bddb06171%3A0x38e8e3f080280314!2sVictoria%2C%20BC%2C%20Canada!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s"
+                width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+    </section>
+    <!--  -->
+    <!-- قسم التذييل (Footer) -->
+    <footer class="footer-section bg-dark text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row">
+
+                <!-- العمود الأول: تواصل معنا (Connect With Us) ونشرة بريدية مصغرة وسوشيال ميديا -->
+                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 text-center text-lg-right">
+                    <h5 class="font-weight-bold mb-3 text-warning" data-ar="تواصل معنا" data-en="Connect With Us">تواصل
+                        معنا</h5>
+                    <p class="small text-muted"
+                        data-ar="ابق على اطلاع بأحدث أخبار المشاريع والخدمات الهندسية من خلال متابعتنا."
+                        data-en="Stay updated with the latest project news and engineering services by following us.">
+                        ابق على اطلاع بأحدث أخبار المشاريع والخدمات الهندسية من خلال متابعتنا.
+                    </p>
+                    <form class="mb-3">
+                        <div class="input-group input-group-sm">
+                            <input type="email" class="form-control rounded-0" placeholder="Your Email" required>
+                            <div class="input-group-append">
+                                <button class="btn btn-warning rounded-0 text-dark font-weight-bold" type="submit"
+                                    data-ar="اشتراك" data-en="Subscribe">اشتراك</button>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- أيقونات التواصل الاجتماعي -->
+                    <div class="social-icons">
+                        <a href="#" class="text-white mx-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white mx-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white mx-2"><i class="fab fa-google"></i></a>
+                        <a href="#" class="text-white mx-2"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-white mx-2"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- العمود الثالث: روابط سريعة (Quick Links) -->
+                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 text-center text-lg-center">
+                    <h5 class="font-weight-bold mb-3 text-warning" data-ar="روابط سريعة" data-en="Quick Links">روابط
+                        سريعة</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li class="mb-2"><a href="index.html" class="text-muted text-decoration-none"
+                                data-ar="الرئيسية >" data-en="Home >">الرئيسية ></a></li>
+                        <li class="mb-2"><a href="about.html" class="text-muted text-decoration-none" data-ar="من نحن >"
+                                data-en="About >">من نحن ></a></li>
+                        <li class="mb-2"><a href="services.html" class="text-muted text-decoration-none"
+                                data-ar="الخدمات >" data-en="Services >">الخدمات ></a></li>
+                        <li class="mb-2"><a href="projects.html" class="text-muted text-decoration-none"
+                                data-ar="المشاريع >" data-en="Projects >">المشاريع ></a></li>
+                        <li class="mb-2"><a href="contact-us.html" class="text-muted text-decoration-none"
+                                data-ar="اتصل بنا >" data-en="Contact >">اتصل بنا ></a></li>
+                    </ul>
+                </div>
+
+                <!-- العمود الرابع: شعار الشركة ومعلومات الاتصال (Runhill Info) -->
+                <div class="col-lg-4 col-md-6 text-center text-lg-right">
+                    <div class="footer-logo mb-3">
+                        <h3 class="text-warning font-weight-bold m-0"><i class="fas fa-city mr-2"></i>RUNHILL</h3>
+                    </div>
+                    <p class="small text-muted"
+                        data-ar="نحن جاهزون دائماً لمساعدتك في تحقيق رؤيتك الهندسية وتطوير مشاريعك بكفاءة عالية."
+                        data-en="We are always ready to help you realize your vision and develop projects with high efficiency.">
+                        نحن جاهزون دائماً لمساعدتك في تحقيق رؤيتك الهندسية وتطوير مشاريعك بكفاءة عالية.
+                    </p>
+                    <p class="small text-muted mb-1"><strong class="text-white" data-ar="العنوان:"
+                            data-en="Address:">العنوان:</strong> Quadro Street Victoria, Canada 210-2750</p>
+                    <p class="small text-muted mb-1"><strong class="text-white" data-ar="الهاتف:"
+                            data-en="Phone:">الهاتف:</strong> +0123-5443-415</p>
+                    <p class="small text-muted mb-0"><strong class="text-white" data-ar="البريد:"
+                            data-en="Email:">البريد:</strong> support@runhill.com</p>
+                </div>
+
+            </div>
+
+            <hr class="border-secondary my-4">
+
+            <!-- حقوق النشر والسياسات -->
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-right mb-2 mb-md-0">
+                    <a href="#" class="text-muted small text-decoration-none mr-3" data-ar="الشروط والأحكام"
+                        data-en="Terms & Condition">الشروط والأحكام</a>
+                    <a href="#" class="text-muted small text-decoration-none" data-ar="سياسة الخصوصية"
+                        data-en="Privacy Policy">سياسة الخصوصية</a>
+                </div>
+                <div class="col-md-6 text-center text-md-left">
+                    <p class="small text-muted mb-0" data-ar="حقوق النشر © Runhill جميع الحقوق محفوظة بواسطة nermen"
+                        data-en="Copyright Runhill All Rights Reserved by nermen">
+                        حقوق النشر © Runhill جميع الحقوق محفوظة بواسطة nermen
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <!-- ............................. -->
+    <!-- jQuery library -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

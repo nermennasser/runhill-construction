@@ -1,0 +1,48 @@
+/* 1. جعل الكرت يحتوي على عناصر نسبية ليتقبل الـ absolute */
+.card {
+  position: relative;
+  transition: background-color 0.4s ease;
+}
+
+/* 2. إنشاء طبقة الـ Overlay باستخدام ::after فوق الصورة فقط أو الكرت بأكمله */
+.card::after {
+  content: "+";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  align-content: center;
+  font-size: 50px;
+  color: #ffffff;
+  background-color: rgba(255, 194, 0, 0.8); /* اللون الأصفر الشفاف */
+
+  /* جعل العنصر مخفياً وصغيراً في البداية */
+  /* الحالة الابتدائية: صغيرة ومخفية */
+  opacity: 0;
+  transform: scale(0);
+
+  /* زيادة مدة الحركة إلى 0.8 ثانية لتكون بطيئة وناعمة جداً */
+  transition:
+    transform 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.5s ease-in-out;
+  z-index: 2;
+  transform-origin: center;
+}
+/* --- أحداث الـ Hover --- */
+
+/* إظهار طبقة الـ ::after فوق الصورة عند الهوفر */
+.card:hover::after {
+  opacity: 0.8;
+  transform: scale(1); /* تكبر لتملأ الكارت بنسبة 100% */
+}
+
+/* تغيير ألوان النصوص في الجزء السفلي للون الداكن عند الهوفر */
+.card:hover .card-body h6 a {
+  color: #101c24 !important;
+}
+
+.card:hover .card-body p {
+  color: rgba(16, 28, 36, 0.75) !important;
+}
