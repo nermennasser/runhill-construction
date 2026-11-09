@@ -48,7 +48,7 @@ body {
   color: #ffb400 !important;
 }
 @media (min-width: 992px) {
-  nav-item {
+  .nav-item {
     position: relative; /* مهم جداً لكي يتموضع الخط بالنسبة للعنصر الأب */
   }
   .navbar-nav .nav-link.active::after {
