@@ -42,21 +42,25 @@ body {
   color: #6c757d; /* لون افتراضي غير نشط */
   transition: color 0.3s ease;
 }
+
 .nav-link:hover,
 .nav-item .nav-link.active {
   color: #ffb400 !important;
 }
-
-.navbar-nav .nav-link.active::after {
-  content: "";
-  position: absolute;
-  bottom: -20px;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background-color: #ffc200;
+@media (min-width: 992px) {
+  nav-item {
+    position: relative; /* مهم جداً لكي يتموضع الخط بالنسبة للعنصر الأب */
+  }
+  .navbar-nav .nav-link.active::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #ffc200;
+  }
 }
-
 /*  */
 /* ضبط المسافة بين اللوجو والقائمة في اللغة العربية (RTL) */
 [dir="rtl"] .navbar-nav.ml-auto {
